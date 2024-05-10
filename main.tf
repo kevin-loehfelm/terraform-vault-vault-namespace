@@ -1,4 +1,8 @@
+data "vault_namespace" "this" {
+  path = var.namespace
+}
+
 resource "vault_namespace" "this" {
-  namespace = var.namespace
+  namespace = data.vault_namespace.this.path_fq
   path      = var.path
 }
