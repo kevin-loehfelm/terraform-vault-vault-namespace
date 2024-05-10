@@ -1,6 +1,6 @@
 variable "namespace" {
   type    = string
-  default = "admin/"
+  default = "admin"
 }
 
 variable "path" {
