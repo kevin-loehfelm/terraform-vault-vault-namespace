@@ -1,8 +1,15 @@
-variable "namespace" {
-  type    = string
-  default = "admin"
+variable "parent_namespace" {
+  type        = string
+  description = "parent namespace (optional)"
+  default     = null
 }
 
-variable "path" {
-  type = string
+variable "name" {
+  type        = string
+  description = "namespace name"
+}
+
+variable "metadata_team" {
+  type        = string
+  description = "team"
 }
