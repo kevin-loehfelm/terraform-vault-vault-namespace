@@ -1,5 +1,5 @@
 locals {
-  namespace = var.parent_namespace ? var.parent_namespace : null
+  namespace = var.parent_namespace != null ? var.parent_namespace : null
 }
 
 resource "vault_namespace" "this" {
