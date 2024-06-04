@@ -14,18 +14,18 @@ resource "vault_namespace" "this" {
   path      = var.path
   custom_metadata = {
     # Point of contact
-    contact_name  = var.contact_name
-    contact_email = var.contact_email
+    contact_name  = local.contact_name
+    contact_email = local.contact_email
 
     # Description
-    description = var.description
+    description = local.description
 
     # Project context
-    wiki_reference = var.wiki_reference
-    jira_reference = var.jira_reference
+    wiki_reference = local.wiki_reference
+    jira_reference = local.jira_reference
 
     # Expiry date
-    expiration_date = var.expiration_date
+    expiration_date = local.expiration_date
   }
 }
 
